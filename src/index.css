@@ -1,13 +1,58 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Black: hsl(0, 0%, 0%);
+  --clr-Dark--Gray: hsl(0, 0%, 55%);
+  --clr-Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+ul{
+  list-style: none;
+}
+h1,h2,h3{
+  font-family: 'Josefin sans', sans-serif;
+  text-transform: uppercase;
+}
+p{
+  font-family: 'Alata', sans-serif ;
+  font-size: 15px;
+}
+button{
+  background-color: transparent;
+  border: none;
+  font-family: 'Alata', sans-serif ;
+  color: var(--clr-White);
+}
+.header{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.showcase{
+  background: url('./images/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+.showcase .overlay{
+  display: flex;
+  align-items: center;
+  height: 700px;
+  padding: 0 20px;
+}
+.showcase .overlay h1{
+  color: var(--clr-White);
+  font-size: 46px;
+  line-height: 1.1;
+  border: 2px solid var(--clr-White);
+  padding: 20px;
 }
