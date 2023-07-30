@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Live Links
 
-Github Link: [Click Here]()
-live URL   : [Click Here]()
+Github Link: [Click Here](https://github.com/rahulvr29/loopstudios-landing-page.git).\
+live URL   : [Click Here](https://loopstudios-landing-page-nine-blush.vercel.app/)
 
 ## Available Scripts
 
