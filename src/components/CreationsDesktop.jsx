@@ -1,13 +1,18 @@
 import React from 'react'
-import data from '../data-mobile'
+import data from '../data-desktop'
 
-const Creations = () => {
+const CreationsDesktop = () => {
   const[cards, setCards] = React.useState(data)
 
 
   return (
-    <section className='creation-mobile'>
-      <h2>Our Creations</h2>
+    <section className='creation-desktop'>
+      <div className="title">
+        <h2>Our Creations</h2>
+        <div className='btn-container'>
+          <button className="btn">See All</button>
+        </div>
+      </div>
     <section>
       {
         cards.map((card) =>{
@@ -23,11 +28,8 @@ const Creations = () => {
         })
       }
     </section>
-    <div className='btn-container'>
-      <button className="btn">See All</button>
-    </div>
     </section>
   )
 }
 
-export default Creations
+export default CreationsDesktop

@@ -32,6 +32,7 @@ button{
   border: none;
   font-family: 'Alata', sans-serif ;
   color: var(--clr-White);
+  cursor: pointer;
 }
 .header{
   position: absolute;
@@ -42,11 +43,46 @@ button{
   padding: 10px 20px;
 }
 .header nav{
-  display: none ;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  min-height: 100vh;
+}
+.header nav.open{
+  display: block;
+}
+.header nav .nav-logo{
+  padding: 20px;
+}
+.header nav ul {
+  padding-top: 80px;
+}
+.header nav ul li{
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+.header nav ul li button{
+  text-transform: uppercase;
+  font-size: 30px;
 }
 .header .menu-btn{
   padding: 20px;
   cursor: pointer;
+  transition: 0.4s;
+}
+.header .menu-btn.rotate .bar-1{
+  transform: rotate(40deg);
+}
+.header .menu-btn.rotate .bar-2{
+  opacity: 0;
+}
+.header .menu-btn.rotate .bar-3{
+  transform: rotate(-40deg);
+  margin-top: -17.5px;
 }
 .header .menu-btn .bar{
   width: 30px;
@@ -55,7 +91,7 @@ button{
   margin: 0 0 5px;
 }
 .showcase{
-  background: url('./images/image-hero.jpg');
+  background: url('./images/mobile/image-hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -90,6 +126,9 @@ button{
   font-size: 14px;
   line-height: 1.7;
 }
+.creation-desktop{
+  display: none;
+}
 .creation-mobile{
   padding: 0 20px 50px;
 }
@@ -99,6 +138,10 @@ button{
 }
 .creation-mobile article{
   position: relative;
+}
+.creation-mobile article:hover{
+  opacity: 0.7;
+  cursor: pointer;
 }
 .creation-mobile h3{
   position: absolute;
@@ -115,6 +158,7 @@ button{
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  place-items: center;
 }
 .creation-mobile  .btn-container{
   text-align: center;
@@ -162,4 +206,186 @@ button{
   font-family: 'Alata', sans-serif ;
   font-size: 15px;
   color: var(--clr-Very-Dark-Gray);
+}
+
+@media  (min-width: 768px){
+  .footer{
+    text-align: initial;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer ul {
+    display: flex;
+  }
+  .footer ul li {
+    margin: 0 20px 0 0;
+  }
+  .footer ul li button{
+    font-size: 18px;
+  }
+  .footer .social{
+    display: flex;
+  }
+}
+
+
+@media  (min-width: 1024px) {
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px;
+    margin-left: 20px;
+  }
+  .header .menu-btn{
+    display: none;
+  }
+  .header nav{
+    display: block;
+    background-color: transparent;
+  }
+  .header nav .nav-logo{
+    display: none;
+}
+.header nav ul{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  right: 120px;
+}
+.header nav ul li{
+  padding: 15px;
+  margin-left: 10px;
+}
+.header nav ul li button{
+  text-transform: capitalize;
+  font-size: 18px;
+  
+}
+
+
+  .showcase{
+    background: url('./images/desktop/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  }
+  .showcase .overlay h1{
+    width: 700px;
+    font-size: 72px;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 50px;
+  }
+
+
+  .interactive{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+
+
+  .interactive-text{
+    position: absolute;
+    width: 600px;
+    right: px;
+    bottom: 20px;
+    padding: 50px;
+    background-color: #fff;
+  }
+}
+
+
+@media  (min-width: 992px) {
+  .creation-mobile{
+    display: none;
+  }
+  .creation-desktop{ 
+    display: block;
+    padding: 50px 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .creation-desktop .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+  }
+  .creation-desktop  .btn-container{
+    text-align: center;
+  }
+  .creation-desktop .btn-container .btn{
+    border: 2px solid black;
+    padding: 10px 30px ;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .creation-desktop .btn-container .btn:hover{
+    background-color: black;
+    color: #fff;
+  }
+  .creation-desktop section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .creation-desktop article{
+    position: relative;
+  }
+  .creation-desktop article:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .creation-desktop h3{
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 20px 20px;
+    color: #fff;
+    font-size: 24px;
+    width: 150px;
+    line-height: 1.3;
+  }
+  .footer{
+    padding: 50px 150px;
+  }
+}
+
+@media  (min-width: 1280px){
+  .interactive{
+    width: 100%;
+    padding: 50px 250px;
+  }
+  .interactive .interactive-text h2{
+    padding: 30px 0 20px;
+    line-height: 1.3;
+    letter-spacing: 3px;
+  }
+  .interactive-text{
+    width: 800px;
+    right: 80px;
+  }
+  .creation-desktop section{
+    max-width: 1100px;
+  }
+  .creation-desktop .title{
+    max-width: 1100px;
+    font-size: 2rem;
+    font-family:  'Josefin sans', sans-serif;
+  }
+  .footer{
+    padding: 50px 250px;
+  }
 }
